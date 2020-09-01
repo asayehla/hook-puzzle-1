@@ -1,23 +1,28 @@
 import React from 'react';
 import Randomize from '../../Hooks/Randomize';
-import CreatePuzzleBoard from '../../components/PuzzleBoard/index.jsx';
+import PuzzleBoard from '../../components/PuzzleBoard/index.jsx';
+import { StyledWrapper, StyledPuzzle } from './style';
 
 const PuzzleView = array => {
 
-    const clickHandler = (e) => {
+    const clickHandlerRandomize = (e) => {
         e.preventDefault();
         Randomize(array);
         window.location.reload(false);
     }
 
     return (
-        <div>
-            <h1>The Game of 15</h1>
-            <div className="puzzle">
-                <CreatePuzzleBoard array={array} />
-            </div>
-            <div className="button" aria-label="button" onClick={clickHandler}>Randomize</div>
-        </div>
+        <StyledWrapper>
+            <StyledPuzzle>
+                <h1>The Game of 15</h1>
+                <div className="puzzle">
+                    <PuzzleBoard array={array} />
+                </div>
+                <div>
+                    <button className="button" aria-label="button" onClick={clickHandlerRandomize}>Randomize</button>
+                </div>
+            </StyledPuzzle>
+        </StyledWrapper>
     );
 
 };
