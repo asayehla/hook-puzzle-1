@@ -1,5 +1,5 @@
 import React from 'react';
-import Randomize from './Hooks/Randomize';
+import Randomize from './gameHelpers';
 
 import './App.scss';
 import PuzzleView from './views/PuzzleView';

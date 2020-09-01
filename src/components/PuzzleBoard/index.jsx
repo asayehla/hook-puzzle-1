@@ -1,14 +1,12 @@
 import React from 'react';
 import { StyledBoard } from './style';
 import Cell from '../Cell';
-import buildMatrix from '../../helper';
+import buildMatris from '../../buildMatris';
 
 const PuzzleBoard = props => {
   const gameNumbers = Object.values(props.array);
   const arrayToRender = gameNumbers[0];
-  const gameBoard = buildMatrix(arrayToRender);
-
-  console.log(gameBoard);
+  const gameBoard = buildMatris(arrayToRender);
 
   const movePiece = (e) => {
     let b = e.target.id;
