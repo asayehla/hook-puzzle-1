@@ -5,12 +5,12 @@ import { StyledWrapper, StyledPuzzle } from './style';
 
 const PuzzleView = array => {
 
-    const clickHandlerRandomize = (e) => {
+   const clickHandlerRandomize = (e) => {
         e.preventDefault();
         Randomize(array);
         window.location.reload(false);
     }
-
+ 
     return (
         <StyledWrapper>
             <StyledPuzzle>

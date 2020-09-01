@@ -14,7 +14,7 @@ const Cell = props => {
          onClick={props.onClick}
          green={green}
          position={props.position}
-         value={props.x}
+         id={props.id} 
         >
             {props.x}
         </StyledCell>)

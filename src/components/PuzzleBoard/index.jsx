@@ -1,31 +1,34 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { StyledBoard } from './style';
 import Cell from '../Cell';
+import buildMatrix from '../../helper';
 
 const PuzzleBoard = props => {
   const gameNumbers = Object.values(props.array);
-  const [arrayToRender, setArrayToRender] = useState(gameNumbers[0]);
- 
-  const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 0];
- 
+  const arrayToRender = gameNumbers[0];
+  const gameBoard = buildMatrix(arrayToRender);
+
+  console.log(gameBoard);
+
   const movePiece = (e) => {
-    console.log(e.target);
-    //setArrayToRender([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 0]);
-   
+    let b = e.target.id;
+    console.log(b);
   }
+
   return (
-  
     <StyledBoard >
-      {arrayToRender.map((x, index) =>
-        x !== 0 ?
-          <Cell
-            key={index}
-            position={index+1}
-            onClick={e => movePiece(e)}
-            x={x}
-            value={x}
-          /> : <div key={index} />
-      )}
+      {gameBoard.map((row, rowIndex) =>
+        row.map((number, index) =>
+          number !== 0 ?
+            <Cell
+              key={number}
+              position={index+1}
+              onClick={e => movePiece(e)}
+              x={number}
+              id={number}
+            /> : <div key={number} id={number} />
+        )
+      )} 
       
     </StyledBoard>
   )
