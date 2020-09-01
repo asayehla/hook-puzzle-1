@@ -1,5 +1,5 @@
 
-const Randomize = array => {
+const randomize = array => {
 
     const shuffleArray = () => {
         for (let i = array.length - 1; i > 0; i--) {
@@ -10,4 +10,4 @@ const Randomize = array => {
     shuffleArray(array);
 }
 
-export default Randomize;
+export default randomize;

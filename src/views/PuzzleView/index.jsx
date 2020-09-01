@@ -1,5 +1,5 @@
 import React from 'react';
-import Randomize from '../../Hooks/Randomize';
+import randomize from '../../randomize';
 import PuzzleBoard from '../../components/PuzzleBoard/index.jsx';
 import { StyledWrapper, StyledPuzzle } from './style';
 
@@ -7,7 +7,7 @@ const PuzzleView = array => {
 
    const clickHandlerRandomize = (e) => {
         e.preventDefault();
-        Randomize(array);
+        randomize(array);
         window.location.reload(false);
     }
  
