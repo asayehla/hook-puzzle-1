@@ -9,24 +9,28 @@ export const StyledWrapper = styled.div`
 export const StyledPuzzle = styled.div`
   display: flex;
   justify-content: center;
-  align-items:center;
+  align-items: center;
   flex-direction: column;
 
   div {
-    
     .button {
       cursor: pointer;
-      background: rgba(0, 0, 0, 0.9);
+      background: #747787;
       border-radius: 3px;
       color: whitesmoke;
       border: none;
       outline: none;
-      font-size: 1.5rem;
-      padding: 1.2rem;
-      margin: 1rem 3rem;
+      font-size: 2rem;
+      letter-spacing: 2px;
+      padding: 10px 2rem;
+      margin: 0.1rem;
+      box-shadow: 3px 3px 4px 0px rgba(0, 0, 0, 0.75);
       &:hover {
         background-color: #a7a7a7;
+        transform-style: preserve-3d;
+        transition: transform 150ms cubic-bezier(0, 0, 0.58, 1),
       }
+      
     }
   }
 `;

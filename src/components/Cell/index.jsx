@@ -1,19 +1,12 @@
-import React,{useState} from 'react';
+import React from 'react';
 import { StyledCell } from './style.jsx';
 
 const Cell = props => {
-   const [green, setGreen] = useState(false);
- 
-    /*
-        if (props.position===props.x){
-            setGreen(true);
-        }  */
-
+   
     return (
         <StyledCell
          onClick={props.onClick}
-         green={green}
-         position={props.position}
+         green={props.green}
          id={props.id} 
         >
             {props.x}

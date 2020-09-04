@@ -19,7 +19,7 @@ const PuzzleView = array => {
                     <PuzzleBoard array={array} />
                 </div>
                 <div>
-                    <button className="button" aria-label="button" onClick={clickHandlerRandomize}>Randomize</button>
+                    <button className="button" aria-label="button" onClick={clickHandlerRandomize}>Shuffle</button>
                 </div>
             </StyledPuzzle>
         </StyledWrapper>
